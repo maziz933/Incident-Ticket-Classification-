@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emails routing</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='icosnet.png')}}" alt="Logo de l'entreprise" class="company-logo">
+        <h1>Emails routing</h1>
+    </header>
+    <main>
+        <button onclick="location.href='{{ url_for('prediction') }}'">Make a prediction</button>
+        <button onclick="location.href='{{ url_for('email_entrants') }}'">
+            Inbox
+            <span class="notification-dot"></span>
+        </button>
+    </main>
+    <footer>
+        <p>&copy; 2024_ by Islam MAZIZ.</p>
+    </footer>
+</body>
+</html>

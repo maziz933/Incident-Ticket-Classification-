@@ -1,0 +1,237 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000, #2c3e50); /* Dégradé de noir à bleu nuit */
+    color: white; /* Couleur du texte par défaut */
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3e50; /* Couleur bleu nuit */
+    color: white; /* Couleur du texte */
+    padding: 10px ;
+    border-bottom: 1px solid #e0e0e0;
+}
+footer{
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3e50; /* Couleur bleu nuit */
+    color: white; /* Couleur du texte */
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: center;
+}
+header img.company-logo {
+    height: 50px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white; /* Couleur de fond des boutons */
+    color: black; /* Couleur du texte des boutons */
+    border: 2px solid #2c3e50;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Transition douce */
+}
+
+button:hover {
+    background-color: #2c3e50; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    color: black; /* Couleur du texte dans la textarea */
+}
+
+input[type="submit"], input[type="button"] {
+    padding: 10px 20px;
+    background-color: white; /* Couleur de fond des boutons */
+    color: black; /* Couleur du texte des boutons */
+    border: 2px solid #2c3e50;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s; /* Transition douce */
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #2c3e50; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+
+#refresh-button {
+    display: none; /* Cacher le bouton "Rafraîchir" par défaut */
+}
+
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner les éléments à gauche */
+    width: 100%;
+}
+
+/* Styles pour les barres de progression */
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #4caf50;
+    text-align: right;
+    line-height: 20px; /* Aligner le texte verticalement */
+    color: white;
+    padding-right: 5px;
+}
+
+
+
+.container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    width: 80%;
+}
+
+.progress-container {
+    margin-left: 30px;
+    display: none; /* Cacher par défaut */
+    flex-direction: column;
+    gap: 9px;
+    width: 100%; /* Ajuster la largeur */
+}
+.progress-wrapper {
+    display: flex;
+    flex-direction: column; /* Disposer en colonne pour que le label soit au-dessus */
+    align-items: center;
+    gap: 5px; /* Espacement entre le label et la barre */
+    width: 100%;
+    margin-bottom: 9px; /* Espacement entre les barres */
+    margin-left: 10px;
+}
+
+.progress-label {
+    text-align: left; /* Centrer le texte */
+    font-weight: bold;
+    width: 100%; /* S'assurer que le label occupe toute la largeur */
+    font-size: 0.8em; /* Taille du texte réduite */
+}
+
+.progress-bar {
+    position: relative;
+    height: 10px; /* Hauteur plus fine */
+    width: 100%; /* Largeur de la barre */
+    background: #ddd; /* Couleur de fond des barres */
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background: orange; /* Dégradé de la barre */
+    border-radius: 5px;
+    position: relative;
+}
+.progress-bar span::after {
+    content: attr(data-percentage);
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white; /* Couleur du texte */
+    font-size: 0.75em;
+}
+
+
+#emails-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin : 5px
+}
+.email-item {
+    background-color: #2c3e50;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.email-item p {
+    margin: 0;
+    flex-grow: 1;
+}
+.categorie {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.assign-btn {
+    margin-left: 20px;
+    padding: 5px 10px; /* Adjust the padding for a smaller size */
+    font-size: 12px; /* Smaller font size */ /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 3px; /* Add some rounding to the corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+#auto-assign-btn {
+    margin-left: 10px;
+}
+.auto_affec{
+    margin-left: 10px;
+}
+
+.auto-assign-container {
+    display: flex;
+    margin-bottom: 10px;
+}

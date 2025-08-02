@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emails incident classification</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='icosnet.png')}}" alt="Company logo" class="company-logo">
+        <h1>Incident emails classification</h1>
+        <img src="{{ url_for('static', filename='icosnet.png')}}" alt="Company logo" class="company-logo">
+    </header>
+    <div class="container">
+        <form method="POST" action="/predict" class="form-container">
+            <div class="model-selector">
+                <label for="model_choice">Model:</label>
+                <select name="model_choice" id="model_choice">
+                    <option value="modele1" {% if model_choice == "modele1" %}selected{% endif %}>CNN-GRU with attention</option>
+                    <option value="modele2" {% if model_choice == "modele2" %}selected{% endif %}>CNN-GRU</option>
+                    <option value="modele3" {% if model_choice == "modele3" %}selected{% endif %}>CNN-LSTM</option>
+                    <option value="modele4" {% if model_choice == "modele4" %}selected{% endif %}>LSTM</option>
+                </select>
+            </div>
+            <div class="email-box">
+                <textarea name="email_content" rows="10"  placeholder="Enter the email content here...">{{ email_content if email_content else "" }}</textarea>
+                <div class="button-container">
+                    <button type="submit"  onclick="predictEmail()">Predict</button>
+                    <button type="button" id="refresh-button" onclick="resetProgress()">Refresh</button>
+                    {% if prediction %}
+                    <h4 id="rslt">Service: <span id="predicted-category">{{ category }}</span></h4>
+                    {% endif %}
+                </div>       
+            </div>
+            {% if prediction %}
+        <div class="progress-container" id="progress-container">
+            {% for category, percentage in results.items() %}
+            <div class="progress-wrapper">
+                <span class="progress-label">{{ category }}</span>
+                <div class="progress-bar" style="width: 100%;">
+                    <span id="progress-{{ category }}" style="width: {{ percentage }}%;" data-percentage="{{ percentage }}%"></span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        </form>
+    
+    </div>
+    <footer>
+        <p>&copy; 2024_ by Islam MAZIZ.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emails routing</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='icosnet.png')}}" alt="Logo de l'entreprise" class="company-logo">
+        <h1>Emails routing</h1>
+    </header>
+    <main>
+        <div class="auto-assign-container">
+            <label for="auto-assign-btn" class="auto_affec">affectation auto</label>
+            <input type="checkbox" id="auto-assign-btn" onclick="toggleAutoAssign()">
+        </div>
+        
+        
+        <div id="emails-container">
+            <!-- Example emails -->
+            <div class="email-item">
+                <p>Email 1: Bonjour, j'ai un problème avec mon accès Internet. La connexion est très lente depuis une semaine.</p>
+                <div class="message-details" style="display: none;">
+                    <p>Plus de détails sur le problème rencontré...</p>
+                </div>
+                <span class="categorie">Accès Internet</span>
+                <button class="assign-btn">Affecter</button>
+            </div>
+            <div class="email-item">
+                <p>Email 2: Bonsoir, mon serveur mutualisé est hors ligne depuis ce matin. Pouvez-vous vérifier cela ?</p>
+                <div class="message-details" style="display: none;">
+                    <p>Plus de détails sur le problème rencontré...</p>
+                </div>
+                <span class="categorie">Hébergement (Serveur Mutualisé)</span>
+                <button class="assign-btn">Affecter</button>
+            </div>
+            <div class="email-item">
+                <p>Email 3: Bonjour, je rencontre des problèmes de facturation avec mon service de téléphonie.</p>
+                <div class="message-details" style="display: none;">
+                    <p>Plus de détails sur le problème rencontré...</p>
+                </div>
+                <span class="categorie">Téléphonie</span>
+                <button class="assign-btn">Affecter</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024_ by Islam MAZIZ.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+,abreviation,form_cmplt
+0,ssl,secure sockets layer
+1,csr,certificate signing request
+2,dns,domain name system
+3,php,hypertext preprocessor
+4,sms,short message service
+5,vps,virtual private server
+6,cpu,central processing unit
+7,ram,random access memory
+8,vm,virtual machine
+9,ssh,secure shell
+10,pdg,président directeur général
+11,utc,coordinated universal time
+12,vpn,virtual private network
+13,ptr,pointer record
+14,tcp,transmission control protocol
+15,smtp,simple mail transfer protocol
+16,ssd,solid state drive
+17,fqdn,fully qualified domain name
+18,ftp,file transfer protocol
+19,udp,user datagram protocol
+20,erp,enterprise resource planning
+21,db,database
+22,api,application programming interface
+23,sql,structured query language
+24,xml,extensible markup language
+25,html,hypertext markup language
+26,csv,comma-separated values
+27,xlsx,microsoft excel open xml spreadsheet
+28,tls,transport layer security
+29,ovh,on vous héberge
+30,ndd,nom de domaine
+31,hdd,hard disk drive
+32,vdc,virtual data center
+33,crm,customer relationship management
+34,smsc,short message service center
+35,svp,s'il vous plaît
+36,pw,password
+37,pb,problème
+38,wan,wide area network
+39,lan,local area network
+40,hmes,hosting managed email service
+41,vroom,virtual room
+42,ccv,customer contact voice
